@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+:root{
+    --yellow: #f9ca24;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    /* text-transform: capitalize; */
+    transition: all 0.2s linear;
+    scroll-behavior: smooth;
+}
+*::selection{
+    background: var(--yellow);
+    color: #333;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+} 
+body{
+    background: #111;
+    padding-left: 35rem;
+}
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;   
+}
+
+.btn i{
+    padding: 0 0.5rem;
+    font-size: 1.8rem;
+}
+.btn:hover{
+    background: var(--yellow);
+}
+
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;  
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.heading span{
+    color: var(--yellow);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1a1a1a;
+    height: 100%;
+    width: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-flow: column;
+    text-align: center;
+    z-index: 1000;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    border:.7rem solid var(--yellow);
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+header .user .name{
+    font-size: 2.7rem;
+    color: #fff;
+}
+
+header .navbar{
+   
+    width: 100%;
+}
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+  
+}
+
+header .navbar ul li a{
+    position: relative;
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+  
+}
+header .navbar ul li a.active{
+    background: var(--yellow);
+}
+
+header .navbar ul li a:hover{
+    background: var(--yellow);
+}
+
+header .navbar ul li a ion-icon{
+    position: absolute;
+    top:1.3rem;
+   left:9.1rem;
+}
+
+
+ header .navbar ul li a .education{
+    position: absolute;
+    top:1.3rem;
+    left: 7.2rem;
+}
+
+header .navbar ul li a .projects{
+    position: absolute;
+    top:1.3rem;
+    left: 8.3rem;
+}
+header .navbar ul li a .contact{
+    position: absolute;
+    top:1.3rem;
+    left: 8.3rem;
+} 
+#menu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #333;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    padding:1rem 1.5rem;
+    font-size: 2.5rem;
+    z-index: 1000;
+    display: none;
+
+}
+/* <----------------------------- HOME PAGE ----------------------------------------> */
+.home{
+    display: flex;
+    justify-content: center;
+    padding: 0 15rem;
+    flex-flow: column;
+}
+
+.home h3{
+    font-size: 2rem;
+    color: #fff;
+}
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+.home h1 span{
+    color: var(--yellow);
+}
+.home h5{
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+}
+.home p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+/* <--------------------------------------- SKILLS PAGE ---------------------------------------> */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 5rem;
+    flex-wrap: wrap;
+}
+
+.row .skills{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+    width: 13rem;
+    margin: 1rem;
+    /* border: white 3px solid; */
+    border-radius: 3rem ;
+    overflow: hidden;
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.2),rgba(255, 255, 255, 0.5));
+    
+}
+.row .skills:hover{
+    box-shadow: 0 0 10px 2px #f9ca24;
+}
+
+
+.row .skills .image{
+    padding: 1rem 3rem;
+}
+.row .skills img{
+    height: 100px;  
+}
+
+.row .skills .down-box{
+    background: var(--yellow);
+    width: 100%;
+}
+.row .skills .title{
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    color: #333;
+}
+
+/* <------------------------------------- EDUCATION PAGE ----------------------------------------------> */
+
+.box-container{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    padding: 1rem 2rem ;
+    padding-left: 6rem;
+}
+
+.box-container .box{
+    position: relative;
+    margin: 4rem 0;
+    padding-left: 4rem;
+    border-left: 0.2rem solid #fff;
+}
+.box-container .box span{
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: 0.5rem 2.5rem;
+}
+.box-container .box h3{
+    font-size: 3rem;
+    color: #fff;
+    padding: 1.2rem 0;
+}
+.box-container .box p{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.box-container .box i{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 2rem;
+    top:-1.5rem;
+    left:-2.5rem;
+    background: var(--yellow);
+    color: #fff;
+}
+
+/* <------------------------------- PROJECTS PAGE --------------------------------> */
+
+.box-container2{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 2rem ;
+    padding-left: 6rem;
+    justify-content: center;
+}
+
+.boxe{
+    position: relative;
+    margin: 3rem; 
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxe::after{
+    content: "";
+    position: absolute;
+    top:-4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    /* transform: skewX(3deg) skewY(3deg); */
+    background: var(--yellow)
+
+}
+.boxe::before{
+    content: "";
+    position: absolute;
+    top:-4px; 
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    /* transform: skewX(3deg) skewY(3deg); */
+    background: var(--yellow);
+}
+
+.boxe:hover::after, .boxe:hover::before{
+    /* transform: skew(-3deg, -3deg); */
+    background: linear-gradient(45deg, #00ccff, rgb(75, 75, 189), #f9ca24);
+}
+
+
+.boxe span img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    z-index: 10;
+    filter: brightness(0.9);
+
+}
+
+.boxe h2{
+    font-size: 5em;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    z-index: 100;
+    position: absolute ;
+    top: 2.5rem;
+}
+
+.overlay{
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: #000;
+    z-index: 10;
+
+}
+ .boxe:hover .overlay{
+    opacity: 0.7;
+}
+
+.overlay a{
+    color: #eee;
+    font-size: larger;
+    text-decoration: underline;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* <-------------------------------- CONTACT PAGE ---------------------------------------> */
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 30rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    /* border: #f9ca24 3px solid; */
+}
+
+.contact .row form{
+    /* border: springgreen 6px solid; */
+    flex:1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .title{
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 2rem;
+    color: #fff;
+}
+
+.contact .row .content .info h3{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        padding: 1rem 0;
+        color: #eee;
+        font-weight: normal;
+}
+
+.contact .row .content .info i{
+    color:var(--yellow);
+    padding-right: 1rem;
+}
+
+.contact .row .content .social-media{
+    font-size: 1.5rem;
+    width: 100%;
+    color: white;
+    height: 20rem;
+    border: 5px yellow solid;
+}
+
+
+/* media queries */
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+
+    }
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+@media (max-width:991px){
+    header{
+        left:-120%
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left:0;
+    }
+    body{
+        padding: 0;
+    }
+}
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:400px){
+    header{
+        width: 100vw;
+    }
+    .box-container{
+        padding: 3rem;
+    }
+    .contact .row form{
+        margin: 2rem 0;
+    }
+    header .navbar ul li a ion-icon{
+       
+       left: 16rem;
+      
+    }
+    header .navbar ul li a .education{
+        position: absolute;
+        top:1.3rem;
+        left: 14rem;
+    }
+    
+    header .navbar ul li a .projects{
+        position: absolute;
+        top:1.3rem;
+        left: 15rem;
+    }
+    header .navbar ul li a .contact{
+        position: absolute;
+        top:1.3rem;
+        left: 15.2rem;
+    } 
+}
+@media (max-width:382px){
+    header .navbar ul li a ion-icon{
+       
+        left: 14rem;
+       
+     }
+     header .navbar ul li a .education{
+         position: absolute;
+         top:1.3rem;
+         left: 12rem;
+     }  
+     
+     header .navbar ul li a .projects{
+         position: absolute;
+         top:1.3rem;
+         left: 13rem;
+     }
+     header .navbar ul li a .contact{
+         position: absolute;
+         top:1.3rem;
+         left: 13.2rem;
+     } 
+}
